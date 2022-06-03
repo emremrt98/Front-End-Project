@@ -1,0 +1,77 @@
+*{
+    color: black;
+    margin: 0;   
+    padding: 0;
+}
+
+body{
+    max-width: 90%;
+    margin-left: 5%;
+    background-color: blanchedalmond;
+}
+
+h1{
+    margin: 10%;
+}
+
+h3{
+    margin-left: 20%;
+}
+
+
+.frame {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 7%;
+    min-height: 60vh;
+    border: 3px solid rgb(19, 19, 70);
+}
+
+input{
+    margin: 5%;
+    height: 4vh;
+    width: 35vh;
+    padding: .5%;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+label{
+    font-size: 1.2rem;
+}
+
+button{
+    margin: 15px;
+    font-size: 1.2rem;
+    width: 25%;
+    margin-left: 20%;
+    cursor: pointer;
+    color: aliceblue;
+    
+}
+
+
+.btn-reset{
+   background-color: tomato;
+}
+.btn-hesapla{
+    background-color: rgb(0, 0, 255);
+}
+
+.btn-reset:hover{
+    background-color: red;
+ }
+ .btn-hesapla:hover{
+     background-color: rgb(0, 121, 84);
+ }
+
+ .btn-reset:focus{
+    background-color: red;
+ }
+ .btn-hesapla:focus{
+     background-color: rgb(0, 121, 84);
+ }
