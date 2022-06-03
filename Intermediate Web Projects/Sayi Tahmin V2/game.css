@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+.geri{
+    position: absolute;
+    left: 10%;
+    background-color: rgb(26, 24, 24);
+    font-size: 2.5rem;
+    border: none;
+    border-radius: 75%;
+    
+}
+
+.geri:hover{
+    background-color: blue;
+}
+
+
+
+.frame{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgb(26, 24, 24), rgba(0, 0, 0, 0.76));   
+    margin: 20vh; 
+    border: 3px solid tomato;
+    border-radius: 25px;
+   
+   
+}
+
+h2{
+    min-height: 7vh;
+    min-width: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, green, red);
+}
+
+h2:hover{
+    background-image: linear-gradient(to right, tomato, rgb(51, 78, 0));
+}
+
+
+.input{
+    margin: 10%;
+}
+
+label{
+    font-size: 1.5rem;
+  
+}
+
+input{
+
+    font-size: 1.3rem;
+    outline: none;
+    color: black;
+    border-radius: 10%;
+    padding: 1%;
+
+}
+
+.buton{
+    margin-left: 40%;
+}
+
+.btn{
+    font-size: 1.2rem;
+    min-height: 4vh;
+    min-width: 12vh;
+    margin-top: 10%;
+    color: black;
+    cursor: pointer;
+    border: none;
+    margin-right: 7px;
+}
+
+.btn-gonder{
+    background-color: rgb(0, 189, 0);
+}
+.btn-reset{
+    background-color: rgb(185, 0, 0);
+}
+
+.btn-gonder:hover{
+    background-color: rgb(0, 209, 0);
+    color: rgb(255, 255, 255);
+}
+.btn-reset:hover{
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+.bilgilendirme{
+    margin-left:45%;
+    font-size: 1.2rem;
+}
+
+h5{
+    font-size: 1.2rem;
+    border: 1px solid white;
+    max-width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    cursor: help;
+    margin-bottom: 15px;
+    
+}
+h5:hover{
+    background-color: rgb(189, 151, 80);
+}
+
+h4{
+    margin-top: 5%;
+}
+
+
+
+
+
+

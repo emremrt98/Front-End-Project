@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+
+    background-image: linear-gradient(to right, rgb(26, 24, 24), rgba(0, 0, 0, 0.76));  
+    background-repeat: no-repeat;
+    height: 78.7vh;
+
+}
+
+
+.frame{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 5px tomato solid;
+    margin: 10% auto;
+    max-width: 80%;
+    min-height: 80%;
+    
+}
+
+button{
+    
+    width: 15rem;
+    height: 15rem;
+    font-size: 3rem;
+    margin-top: 15%;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 75%;
+    border: none;
+}
+
+.kolay{
+    background-color: rgb(0, 0, 209);
+    animation: ball-animation 2s ease forwards alternate;
+}
+
+.orta{
+    background-color: rgb(207, 135, 0);
+    animation: ball-animation2 2.5s  ease forwards alternate;
+}
+.zor{
+    background-color: rgb(207, 0, 0);
+    animation: ball-animation 3s ease forwards alternate;
+}
+
+.kolay:hover{
+    background-color: blue;
+}
+
+.orta:hover{
+    background-color: orange;
+}
+.zor:hover{
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+@keyframes ball-animation{
+    from{
+        transform: translateY(3rem);
+    }
+    to{
+        transform: translateY(-2rem);
+    }
+}
+
+@keyframes ball-animation2{
+    from{
+        transform: translateY(-3rem);
+    }
+    to{
+        transform: translateY(5rem);
+    }
+}

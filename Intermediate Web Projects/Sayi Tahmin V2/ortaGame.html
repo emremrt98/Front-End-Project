@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayı Tahmin Oyunu V2.0</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div class="frame">
+
+        <div class="anaMenu">
+
+            <h2>Sayı Tahmin Oyunu V2.0</h2>
+            <button class="geri" onclick="geriBtn()"><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <div class="input">
+
+
+                <form action="#">
+                    <div class="input-2">
+
+                        <label for="veri">Sayı Giriniz : </label>
+                        <input type="text" id="veri">
+
+                    </div>
+
+                    <div class="buton">
+
+                        <button type="submit" class="btn btn-gonder">Gönder</button>
+                        <button type="reset" onclick="resetBtn()" class="btn btn-reset">Sıfırla</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="bilgilendirme">
+                <h4 class="dogru-sayi">Doğru Sayı : &nbsp&nbsp&nbsp--</h4>
+                <h4 class="bilgi-metni">Yukarı aşağı bilgilendirme</h4>
+                <h4 class="kalan-hak">Kalan Hak : &nbsp&nbsp&nbsp&nbsp--</h4>
+
+            </div>
+            <h5>Yardım</h5>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="gameOrta.js"></script>
+
+</body>
+
+</html>
