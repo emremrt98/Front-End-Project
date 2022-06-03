@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --accent-color : black;
+    --main-color : #424242;
+}
+
+body{
+    background-image: linear-gradient(to top, var(--accent-color), var(--main-color));
+    background-repeat: no-repeat;
+    min-height: 72vh;
+}
+h2{  
+    text-align: center;
+    margin-top: 200px;
+    font-size: 4em;
+    color: azure;
+    
+    font-family: 'Rowdies', cursive;
+}
+.clock-items{
+    font-size: 3em;
+    display: inline-block;
+    margin-left: 525px;
+    margin-right: -520px;
+    margin-top: 50px;
+    width: 150px;
+    height: 200px;
+    background-color: rgba(238, 62, 62, 0.781);
+    color: azure;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Rowdies', cursive;
+    border-radius: 20px;
+}
+#hour{
+    margin-left: 50px;
+    margin-top: 60px;
+}
+#minute{
+    margin-left: 50px;
+    margin-top: 60px;
+}
+#second{
+    margin-left: 50px;
+    margin-top: 60px;
+}

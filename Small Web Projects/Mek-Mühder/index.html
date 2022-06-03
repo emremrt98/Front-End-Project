@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Ekranı</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="div" id="div">
+
+
+        <div class="class1">
+            <h1>Mek-Staj Başvuru Formu</h1>
+            <p>İş ve staj ilanlarını incelemek için tıklayınız.</p>
+            <p><a
+                    href="https://mekatronik.org.tr/faaliyetler/kariyer/ ">https://mekatronik.org.tr/faaliyetler/kariyer/</a>
+            </p>
+            <p>CV Havuzumuza kayıt olmak için formu doldurunuz. </p>
+            <p><a href="https://link.mm.org.tr/cv ">https://link.mm.org.tr/cv </a></p>
+            <p>NOT:</p>
+            <p>Bu hizmet iş veya staj ilanlarına daha hızlı ulaşabilmeniz için verilmektedir, Lütfen bilgilerinizi doğru
+                giriniz.</p>
+            <p>****Bu form Bilgi İşlem Biriminin 028 numaralı kararı ile onaylanmıştır. <br>
+                WhatsApp iletişim hattımızdan bizimle iletişime geçebilirsiniz. ( +90 212 909 35 95 ) </p>
+
+            <hr>
+            <p><a href="mailto:emre.mrt98@gmail.com">emre.mrt98@gmail.com</a></p>
+            <p>Dosyaları yükleyip bu formu gönderdiğinizde Google hesabınızla ilişkilendirilen ad ve fotoğraf
+                kaydedilir. </p>
+            <p>E-posta adresiniz yanıtınızın bir parçası değildir.</p>
+            <p style="color: rgb(221, 7, 7);">* Gerekli</p>
+
+        </div>
+
+        <div>
+            <form action="#">
+                <p class="class1">
+                    <label class="class3" for="ad">Ad</label>
+                    <br><br><br>
+                    <input class="class2" type="text" name="isim" id="ad" placeholder="Yanıtınız" required>
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="soyad">Soyad</label>
+                    <br><br><br>
+                    <input class="class2" type="text" name="soyisim" id="soyad" placeholder="Yanıtınız" required>
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="">Cinsiyet</label>
+                    <br><br><br>
+                    <input type="radio" name="cinsiyet" id="erkek">
+                    <label for="erkek">Erkek</label> <br>
+                    <input type="radio" name="cinsiyet" id="kadın">
+                    <label for="kadın">Kadın</label>
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="email">E-Posta</label>
+                    <br><br><br>
+                    <input class="class2" type="email" name="mail" id="email" required placeholder="Yanıtınız">
+                    <br><br>
+                </p>
+
+
+                <p class="class1">
+                    <label class="class3" for="tel">Telefon (5xx)</label>
+                    <br><br><br>
+                    <input class="class2" type="tel" name="tel" id="tel" required placeholder="Yanıtınız">
+                    <br><br>
+                </p>
+
+
+
+                <p class="class1">
+                    <label class="class3" for="linkedin">Linkedin Hesap Linki</label>
+                    <br><br><br>
+                    <input class="class2" type="url" name="linkedin" id="linkedin" required placeholder="Yanıtınız">
+                    <br><br>
+                </p>
+
+                <p class="class1" >
+                    <label class="class3" for="sehirler">İkamet Ettiğiniz İl</label>
+                    <br><br><br>
+                    <select name="sehirler" id="sehirler" required >
+
+                        <option  value="seciniz">Seçin</option>
+                        <option value="Adana">Adana</option>
+                        <option value="Ankara">Ankara</option>
+                        <option value="Adana">Konya</option>
+                        <option value="Ankara">Eskişehir</option>
+                        <option value="Adana">İstanbul</option>
+                        <option value="Ankara">Gaziantep</option>
+
+                    </select>
+                    <br><br>
+
+                </p>
+
+
+                <p class="class1">
+                    <label class="class3" for="ilce">İkamet Ettiğiniz İlçe</label>
+                    <br><br><br>
+                    <input class="class2" type="text" name="ilce" id="ilce" required placeholder="Yanıtınız">
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="uni">Üniversite</label>
+                    <br><br><br>
+                    <input class="class2" type="text" name="uni" id="uni" required placeholder="Yanıtınız">
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="bolum">Bölüm</label>
+                    <br><br><br>
+                    <input class="class2" type="text" name="bolum" id="bolum" required placeholder="Yanıtınız">
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="ogrenim">Öğrenim Durumu</label>
+                    <br><br><br>
+                    <select name="ogrenim" id="ogrenim" required>
+
+                        <option value="seciniz">Seçin</option>
+                        <option value="ilkokul">İlkokul</option>
+                        <option value="ortaokul">Ortaokul</option>
+                        <option value="lise">Lise</option>
+                        <option value="lisans">Lisans</option>
+                        <option value="yukseklisans">YüksekLisans</option>
+
+                    </select>
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="mezun">Mezuniyet Yılı</label>
+                    <br><br><br>
+                    <input type="date" name="mezun" id="mezun" min="01.01.1960" max="01.06.2040">
+                    <br><br>
+
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="ilan">Başvurmak İstediğiniz İlan Kodu</label>
+                    <br><br><br>
+                    <select name="ilan" id="ilan">
+
+                        <option value="seciniz">Seçin</option>
+                        <option value="ilan1">Mek-Staj-35</option>
+                        <option value="ilan2">Mek-Staj-36</option>
+                        <option value="ilan3">Mek-Staj-37</option>
+                        <option value="ilan4">Mek-Staj-38</option>
+
+                    </select>
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="yetkinlik">Yetkinlikleriniz</label>
+                    <br><br><br>
+                    <input class="class2" type="text" name="yetkinlik" id="yetkinlik" required placeholder="Yanıtınız">
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3">Bildiğiniz Yabancı Diller </label> <br>
+                    <label class="class3">Birden Fazla İşaretleyebilirsiniz.</label> <br><br><br>
+                    <input type="checkbox" name="diller1" id="diller1">
+                    <label for="diller1">İngilizce</label> <br>
+
+                    <input type="checkbox" name="diller2" id="diller2">
+                    <label for="diller2">Almanca</label> <br>
+
+                    <input type="checkbox" name="diller3" id="diller3">
+                    <label for="diller3">Rusça</label> <br>
+
+                    <input type="checkbox" name="diller4" id="diller4">
+                    <label for="diller4">Çince</label> <br>
+
+                    <input type="checkbox" name="diller5" id="diller5">
+                    <label for="diller5">İspanyolca</label> <br>
+
+                    <input type="checkbox" name="diller6" id="diller6">
+                    <label for="diller6">Arapça</label> <br>
+
+                    <input type="checkbox" name="diller7" id="diller7">
+                    <label for="diller7">Diğer</label>
+                    <input type="text" name="diller7" id="diller7">
+                    <br><br>
+
+                </p>
+
+                <p class="class1">
+                    <label class="class3">İngilizce Dil Seviyeniz</label>
+                    <br><br><br>
+
+                    <span style="margin-left: 52px;">
+
+                        <label for="bir">1</label>
+
+                    </span>
+
+                    <span style="margin-left: 14px;">
+
+                        <label for="iki">2</label>
+
+                    </span>
+
+                    <span style="margin-left: 13px;">
+
+                        <label for="uc">3</label>
+
+                    </span>
+
+                    <span style="margin-left: 12px;">
+
+                        <label for="dort">4</label>
+
+                    </span>
+
+                    <span style="margin-left: 13px;">
+
+                        <label for="bes">5</label>
+
+                    </span>
+
+                    <br>
+                    Düşük
+                    <input type="radio" name="derece" id="bir">
+                    <input type="radio" name="derece" id="iki">
+                    <input type="radio" name="derece" id="uc">
+                    <input type="radio" name="derece" id="dort">
+                    <input type="radio" name="derece" id="bes">
+                    Yüksek
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3" for="ek">Eklemek İstedikleriniz Varsa Belirtiniz</label>
+                    <br><br><br>
+
+                    <input class="class2" type="text" name="ek" id="ek" placeholder="Yanıtınız">
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <label class="class3">CV Yükleme</label>
+                    <br><br><br>
+                    <input type="file" name="dosya" id="dosya" required>
+                    <br><br>
+                </p>
+
+                <p class="class1">
+                    <span class="class3">
+                        Formda paylaştığınız bilgiler ve e-posta olarak gönderdiğiniz CV'nizdeki kişisel verilerinizin
+                        Kişisel Verileri Koruma Kanunu uyarınca işlenmesini ve gerekli durumlarda ilgili firma/lar ile
+                        paylaşılmasını onaylıyor musunuz?
+                    </span>
+                    
+
+                    <br><br><br>
+                    <input type="radio" name="onay1" id="onay1" required>
+                    <label for="onay1">Onaylıyorum</label>
+                    <br><br>
+
+                </p>
+
+                <p class="class1">
+                    <span class="class3">
+                        İş ve staj ilanları, ve başvuru durumunuzla ilgili olarak tarafınıza e-posta, sms ve/veya
+                        telefon ile ulaşılmasını onaylıyor musunuz?
+                    </span>
+                    <br><br><br>
+                    <input type="radio" name="onay2" id="onay2" required>
+                    <label for="onay2">Onaylıyorum</label>
+                    <br><br>
+                </p>
+
+
+                <input type="submit" name="gonder" id="gonder" value="Gönder">
+                <input type="reset" name="reset" id="reset" value="Formu Temizle">
+
+            </form>
+
+            
+
+
+        </div>
+        
+    </div>
+   
+
+</body>
+
+</html>
