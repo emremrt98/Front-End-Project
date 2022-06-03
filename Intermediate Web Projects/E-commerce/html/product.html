@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <p class="count">0</p>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/logo.png" alt="">
+        </div>
+        <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#"><img class="sepet" src="../assets/cart.png" alt=""></a></li>
+        </ul>
+
+    </nav>
+
+    <!-------------Product-------------->
+    <div class="product">
+
+        <div class="bgproduct">
+            <div class="main-image">
+                <img src="../assets/gallery-1.jpg">
+            </div>
+
+            <div class="smproduct">
+                <img onclick="imageI()" src="../assets/gallery-1.jpg" >
+                <img onclick="imageI2()" src="../assets/gallery-2.jpg" >
+                <img onclick="imageI3()" src="../assets/gallery-3.jpg" >
+                <img onclick="imageI4()" src="../assets/gallery-4.jpg">
+            </div>
+        </div>
+
+
+
+        <div class="info">
+            <p>Home / T-Shirt</p>
+            <h1>Red Printed T-Shirt by HRX</h1>
+            <h3>$50.00</h3>
+            <select>
+                <option value="">Select Size</option>
+                <option value="">Small</option>
+                <option value="">Medium</option>
+                <option value="">Large</option>
+            </select>
+            <input class="inputAdet" type="number" min="1" max="10" value="1">
+            <button class="addCart">Add To Cart</button>
+            <h2>Product Details</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aut officia aliquam magni fugiat inventore
+                rerum non, ab officiis alias praesentium unde illum facilis autem voluptatum. Harum inventore veritatis
+                quod!</p>
+
+
+
+
+        </div>
+
+
+    
+
+    </div>
+
+    <div class="alert">
+        <p>10 adetten fazla ürün ekleyemezsiniz!</p>
+    </div>
+
+
+
+    <div class="related-product">
+        <h2>Related Product</h2>
+        <div class="related-img">
+            <img src="../assets/product-9.jpg" alt="">
+            <img src="../assets/product-10.jpg" alt="">
+            <img src="../assets/product-11.jpg" alt="">
+            <img src="../assets/product-12.jpg" alt="">
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="download">
+            <h1>Download Our App</h1>
+            <p>Download App for Android and Ios mobile phone</p>
+            <img src="../assets/play-store.png" alt="">
+            <img src="../assets/app-store.png" alt="">
+        </div>
+        <div class="footer-logo">
+            <img src="../assets/logo-white.png" alt="">
+            <p style="text-align: center;">Our purpose is to sustainably make the pleasure and benefits of sports
+                accessible to the many.</p>
+        </div>
+        <div>
+            <h3>Useful Links</h3>
+            <ul>
+                <li>Coupons</li>
+                <li>Blog Post</li>
+                <li>Return Policy</li>
+                <li>Join Affilliate</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Follow Us</h3>
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+    </footer>
+    <div><i class="fa-solid fa-circle-arrow-up fixed-icon"></i></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../javascript/script.js"></script>
+</body>
+
+</html>
