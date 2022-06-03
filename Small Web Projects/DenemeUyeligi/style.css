@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("image/background.jpg") no-repeat;
+    background-size: cover;
+
+}
+
+.first-class{
+    display: flex;
+    align-items: center;
+    margin: 5% 10%;
+}
+
+.second-class h2{
+    font-size: 2.3em;
+    margin-bottom: 5%;
+    max-width: 45%;
+
+}
+
+.p1{
+    max-width: 100%;
+}
+.second-class p{
+    font-size: 1.5em;
+}
+
+.p-Header{
+   
+    margin-bottom: 5%;
+   
+    border: 1px solid rgb(41, 41, 202);
+    border-radius: 7px;
+    background-color: rgb(62, 62, 207);
+    padding: 4%;
+    color: aliceblue;
+    text-align: center;
+   
+}
+.frame{
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 10%;
+    width: 100%;
+    background-color: white;
+}
+
+.third-class div form>input{
+    display: flex;
+    font-size: 1em;
+    padding: 3%;
+    width: 100%;
+    outline: none;
+    margin-bottom: 10px;
+    border: 1px solid rgba(141, 139, 139, 0.39);
+    border-radius: 7px;
+}
+.third-class{
+    width: 100%;
+}
+
+.p2-Header{
+    opacity: 0.65;
+    margin-top: 10px;
+}
+
+.btn{
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 158, 0, 0.664);
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transition-duration: 1s;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.register{
+    background-color: rgb(4, 165, 4);
+    margin-top: 2px;
+    border: 1px solid rgb(4, 165, 4);
+    padding: 2%;
+    float: right;
+   
+
+}
+
