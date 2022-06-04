@@ -6,7 +6,7 @@ buton.addEventListener("click", (e) => {
     e.preventDefault();
 
     const girdi = document.querySelector(".inputText").value;
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + girdi + "&appid=b6bf92d95010884e91044ca4acc037d3&lang=tr"
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + girdi + "&{API KEY}&lang=tr" // ENTER YOUR API KEY
 
     fetch(url).then(weather => {
         return weather.json()
