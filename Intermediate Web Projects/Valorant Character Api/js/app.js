@@ -30,19 +30,19 @@ class Hero {
 }
 
 async function achieveHero(hero) {
-    const character = new Hero(hero.displayName, hero.description, hero.bustPortrait, hero.abilities);
-    console.log(character.characterAbilities());
 
-    // const name = hero.displayName
-    // const desc = hero.description
-    // const img = hero.bustPortrait
-    // const abilities = hero.abilities
+    // İstersek class tanımlayıp her seferinde bir sınıf oluşturarak ekrana karakterleri geçebilirsiniz.
+    const character = new Hero(hero.displayName, hero.description, hero.bustPortrait, hero.abilities);
+
+    // İstersekte Descructuring yöntemiyle objelere erişip yolumuza devam edebiliriz
+    //const { displayName: name, description: desc, bustPortrait: img, abilities } = hero;
+
     // const ability = []
     // for (let element of abilities) {
     //     ability.push(element.displayIcon)
 
     // }
-
+    //await defineElement(name, desc, img, ability)
     await defineElement(character.name, character.desc, character.img, character.characterAbilities())
 }
 function defineElement(name, desc, img, ability) {
