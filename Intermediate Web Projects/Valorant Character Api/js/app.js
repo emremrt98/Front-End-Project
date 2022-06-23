@@ -12,18 +12,38 @@ function valHero(info) {
     });
 }
 
-async function achieveHero(hero) {
-    const name = hero.displayName
-    const desc = hero.description
-    const img = hero.bustPortrait
-    const abilities = hero.abilities
-    const ability = []
-    for (let element of abilities) {
-        ability.push(element.displayIcon)
-
+class Hero {
+    constructor(name, desc, img, abilities) {
+        this.name = name,
+            this.desc = desc,
+            this.img = img,
+            this.abilities = abilities
     }
 
-    await defineElement(name, desc, img, ability)
+    characterAbilities() {
+        const ability = [];
+        for (let element of this.abilities) {
+            ability.push(element.displayIcon)
+        }
+        return ability;
+    }
+}
+
+async function achieveHero(hero) {
+    const character = new Hero(hero.displayName, hero.description, hero.bustPortrait, hero.abilities);
+    console.log(character.characterAbilities());
+
+    // const name = hero.displayName
+    // const desc = hero.description
+    // const img = hero.bustPortrait
+    // const abilities = hero.abilities
+    // const ability = []
+    // for (let element of abilities) {
+    //     ability.push(element.displayIcon)
+
+    // }
+
+    await defineElement(character.name, character.desc, character.img, character.characterAbilities())
 }
 function defineElement(name, desc, img, ability) {
     let hero = `<img class="card-image" src="${img}"  alt="">
@@ -42,10 +62,12 @@ function defineElement(name, desc, img, ability) {
 
     generalCard.appendChild(card)
 }
+
 getApi()
 
 const inputValue = document.querySelector(".search-input")
-inputValue.addEventListener("input", function (e) {
+
+inputValue.addEventListener("input", function () {
     const charactersNames = document.querySelectorAll(".hero-name")
     const search = inputValue.value.toLowerCase()
     charactersNames.forEach(character => {
