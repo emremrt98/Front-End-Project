@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #fff, rgb(179, 179, 179));
+}
+.container{
+    margin: 250px 0;
+    border: 1px solid black;
+    padding: 25px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.815),rgb(43, 43, 43));
+}
+
+.container h1{
+    font-size: 2.5rem;
+    margin: 50px 0;
+}
+
+.input input{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    border: none;
+    color: black;
+    text-align: center;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.btn button{
+    width: 30%;
+    padding: 5px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    margin: 25px 5px;
+    text-align: center;
+}
+
+.hesapla{
+    background-color: green;
+    
+}
+
+.sifirla{
+    background-color: red;
+}
+
+.text{
+    text-align: center;
+    margin-top: 25px;
+}
