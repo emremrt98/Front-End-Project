@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie to Movie</title>
+    <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/x-icon">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main-sass.css">
+</head>
+
+<body>
+    <header class="container-fluid bg-dark">
+        <div class="container general-menu">
+            <div class="logo">
+                <img class="logo-image" src="../assets/logo/logo.png" alt="">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Anasayfa</a></li>
+                    <li id="film"><a  href="#" onclick="addMovie()">Film Ekle</a></li>
+                    <li><a href="#"><button class="btn bg-primary p-2 nav-btn text-light">Giriş Yap</button></a></li>
+                    <li><a href="#"><button class="btn bg-success p-2 nav-btn text-light">Kayıt Ol</button></a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="addMovie container bg-light">
+        <h3 class="pt-5">Adding a Movie</h3>
+        <hr>
+        <form>
+            <div class="input-box">
+                <input class="inputs newMovieName" type="text"><span>Movie Name</span>
+            </div>
+            <div class="input-box">
+                <input class="inputs newMovieDesc" type="text"><span>Description</span>
+            </div>
+            <div class="input-box">
+                <input class="inputs newMovieImg" type="text"><span>Image Link</span>
+            </div>
+            <div>
+                <select class="newMovieType1">
+                    <option value="">Select Type 1</option>
+                    <option value="">""</option>
+                    <option value="">Action</option>
+                    <option value="">Fantastic</option>
+                    <option value="">Adventure</option>
+                    <option value="">Horror/Tension</option>
+
+                </select>
+            </div>
+            <div>
+                <select class="newMovieType2">
+                    <option value="">Select Type 2</option>
+                    <option value="">""</option>
+                    <option value="">Action</option>
+                    <option value="">Fantastic</option>
+                    <option value="">Adventure</option>
+                    <option value="">Horror/Tension</option>
+
+                </select>
+            </div>
+            <div class="input-box">
+                <input class="inputs newMovieRank" type="number"><span>Rank</span>
+            </div>
+            <div><button class="btn btn-success text-light" onclick="register()" type="submit">Add</button><button class="btn btn-warning" type="reset">Reset</button></div>
+        </form>
+    </div>
+
+
+
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-10">
+                    <!--FİLMLER-->
+                    <div class="row movie-lists">
+
+                    </div>
+
+                </div>
+                <div class="col-2 mt-5">
+                    <div class="row top-list sidebar bg-light">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li class="mt-3" onclick="showAll()"><a href="#">All</a></li>
+                            <li class="mt-3" onclick="showAct()"><a href="#">Action</a></li>
+                            <li class="mt-3" onclick="showFant()"><a href="#">Fantastic</a></li>
+                            <li class="mt-3" onclick="showAdv()"><a href="#">Adventure</a></li>
+                            <li class="mt-3" onclick="showHor()"><a href="#">Horror/Tension</a></li>
+                        </ul>
+                    </div>
+                    <!--FİLM LİSTESİ-->
+                    <div class="row mt-5">
+                        <div class="top-list bg-light">
+                            <h3>Top 5 Movie</h3>
+                            <div class="row pt-3 pl-1">
+                                <col-4 class="mt-3"><img src="../assets/avengers/1.jpg" class=" top-img" alt=""><span
+                                        class="ms-3">Avengers 2</span></col-4>
+                                <col-4 class="mt-3"><img
+                                        src="https://upload.wikimedia.org/wikipedia/tr/4/49/Jurassic_Park_film_posteri.jpg"
+                                        class=" top-img" alt=""><span class="ms-3">Jurassic Park</span></col-4>
+                                <col-4 class="mt-3"><img
+                                        src="https://m.media-amazon.com/images/M/MV5BMTMyNTM5MDcyOV5BMl5BanBnXkFtZTcwMzkzMzY4Mg@@._V1_.jpg"
+                                        class=" top-img" alt=""><span class="ms-3">The Saw</span></col-4>
+                                <col-4 class="mt-3"><img
+                                        src="https://m.media-amazon.com/images/M/MV5BMzU0NDY0NDEzNV5BMl5BanBnXkFtZTgwOTIxNDU1MDE@._V1_FMjpg_UX1000_.jpg"
+                                        class=" top-img" alt=""><span class="ms-3">The Hobbit</span></col-4>
+                                <col-4 class="mt-3"><img
+                                        src="http://www.filmdoktoru.com/wp-content/uploads/2017/07/get-out-filmdoktoru.jpg"
+                                        class=" top-img" alt=""><span class="ms-3">Get Out</span></col-4>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

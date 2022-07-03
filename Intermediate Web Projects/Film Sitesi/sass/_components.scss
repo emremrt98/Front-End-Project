@@ -1,0 +1,158 @@
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $text-color  !important;
+}
+
+body {
+    
+    background-color: $primary-color;
+
+}
+
+.general-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10vh;
+   
+    
+    .logo {
+
+        .logo-image {
+            width: 20%;
+        }
+    }
+
+    .menu {
+        
+        
+        ul {
+            display: flex;
+
+            li {
+                list-style: none;
+                margin-right: 30px;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                z-index: 1;
+
+                a {
+                    text-decoration: none;
+                    color: $menu-text  !important;
+
+                    & .nav-btn {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card {
+    margin-left: 25px;
+}
+
+.top-list {
+    border: 1px solid white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+
+    h3 {
+
+        border-bottom: 1px solid;
+        padding: 5px 15px;
+    }
+
+    .top-img {
+        width: 75px;
+        border-radius: 50%;
+
+        &+span {
+            font-weight: bold;
+        }
+    }
+
+}
+
+.sidebar {
+    ul {
+        li {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.movie-lists {
+    .card-width {
+        width: 21rem;
+    }
+}
+
+
+.addMovie {
+    width: 30%;
+    height: 50vh;
+    border: 1px solid black;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10px;
+    display: none;
+    z-index: 10;
+    
+    form {
+        .inputs {
+            width: 80%;
+            margin-top: 20px;
+            padding: 10px;
+            outline: none;
+            font-size: 1.3rem;
+        }
+
+        & div {
+            padding: 0 10px;
+            position: relative;
+
+            span {
+                position: absolute;
+                left: 20px;
+                top: 8px;
+                transition: all .5s;
+                background-color: #f8f9fa;
+                border-left: 1px solid;
+                border-right: 1px solid;
+                padding: 0 10px;
+                font-size: .8rem;
+            }
+
+            & select {
+                padding: 10px;
+                margin-top: 20px;
+                outline: none;
+                width: 30%;
+            }
+
+            button {
+                width: 14.3%;
+                margin-top: 20px;
+                margin-left: 5px;
+                
+            }
+        }
+    }
+}
+
+#film{
+    cursor: pointer !important;
+}
