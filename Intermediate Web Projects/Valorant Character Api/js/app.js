@@ -1,82 +1,93 @@
-function getApi() {
-    const url = "https://valorant-api.com/v1/agents"
-    fetch(url).then(res => res.json())
-        .then(async data => await valHero(data))
-        .catch(err => console.log("error"))
-}
 
-function valHero(info) {
-    const data = info.data
-    data.forEach(async hero => {
-        await achieveHero(hero)
+// Fetch Kullanarak Valorant Sitesinden Verileri Çekip JSON formatına çevirdik
+function getApi() {
+    const url = "https://valorant-api.com/v1/agents";
+    fetch(url).then(response => response.json())
+        .then(async element => {
+            await character(element)
+        });
+}
+// Çektiğimiz verilerin bir dizi olarak gelmesi sonucu foreach yardımıyla üzerinde gezip karakterlerimize ulaştık
+function character(element) {
+    const characterArray = element.data;
+    characterArray.forEach(async characterObje => {
+        await getCharacterData(characterObje);
     });
 }
-
-class Hero {
-    constructor(name, desc, img, abilities) {
-        this.name = name,
-            this.desc = desc,
-            this.img = img,
-            this.abilities = abilities
+// Class tanımlayarak daha komplike bir yapı elde ettik ve içeriye yolladığımız verilerden her bir karakter için
+// yeni bir class oluşturduk.
+class DefineCharacter {
+    constructor(name, desc, img, abilityArray) {
+        this.name = name;
+        this.desc = desc;
+        this.img = img;
+        this.abilitiesArray = abilityArray
     }
 
     characterAbilities() {
-        const ability = [];
-        for (let element of this.abilities) {
-            ability.push(element.displayIcon)
-        }
-        return ability;
+        let abilityArray = [];
+
+        this.abilitiesArray.forEach(element => {
+
+            abilityArray.push(element.displayIcon);
+        })
+        return abilityArray;
     }
 }
 
-async function achieveHero(hero) {
+// Edindiğimiz karakter objelerini Destructuring  yardımıyla parçalayarak class oluşmasını sağladık.
+function getCharacterData(characterObje) {
 
-    // İstersek class tanımlayıp her seferinde bir sınıf oluşturarak ekrana karakterleri geçebilirsiniz.
-    const character = new Hero(hero.displayName, hero.description, hero.bustPortrait, hero.abilities);
+    const { displayName: characterName, description: characterDesc, bustPortrait: characterImg, abilities: abilitiesArray } = characterObje;
+    const characters = new DefineCharacter(characterName, characterDesc, characterImg, abilitiesArray);
 
-    // İstersekte Descructuring yöntemiyle objelere erişip yolumuza devam edebiliriz
-    //const { displayName: name, description: desc, bustPortrait: img, abilities } = hero;
+    // console.log(characterName);
+    // const characterName = characterObje.displayName;
+    // const characterDesc = characterObje.description;
+    // const characterImg = characterObje.bustPortrait;
+    // const abilitiesArray = characterObje.abilities;
+    // let abilityArray = [];
 
-    // const ability = []
-    // for (let element of abilities) {
-    //     ability.push(element.displayIcon)
+    // abilitiesArray.forEach(element => {
+    //     abilityArray.push(element.displayIcon);
+    // })
 
-    // }
-    //await defineElement(name, desc, img, ability)
-    await defineElement(character.name, character.desc, character.img, character.characterAbilities())
+    createCharacter(characters.name, characters.desc, characters.img, characters.characterAbilities());
 }
-function defineElement(name, desc, img, ability) {
+// Klasik JS Dom yapılarından faydalanarak kartlarımızı oluşturup ekranımıza yansıttık
+function createCharacter(name, desc, img, abilityArray) {
     let hero = `<img class="card-image" src="${img}"  alt="">
     <h4 class="hero-name">${name}</h4>
     <p class="card-desc">${desc}</p>
     <div class="ability">
-     <img class="ability-images" src="${ability[0]}" alt="">
-     <img class="ability-images" src="${ability[1]}" alt="">
-     <img class="ability-images" src="${ability[2]}" alt="">
-     <img class="ability-images" src="${ability[3]}" alt="">
+     <img class="ability-images" src="${abilityArray[0]}" alt="">
+     <img class="ability-images" src="${abilityArray[1]}" alt="">
+     <img class="ability-images" src="${abilityArray[2]}" alt="">
+     <img class="ability-images" src="${abilityArray[3]}" alt="">
     </div>`
+
     const generalCard = document.querySelector(".general-card")
     const card = document.createElement("div")
     card.className = ("card")
     card.innerHTML = hero
 
+
     generalCard.appendChild(card)
 }
 
-getApi()
 
-const inputValue = document.querySelector(".search-input")
+// Search ekranında karakterlerimize erişmeye çalıştık
+getApi();
 
-inputValue.addEventListener("input", function () {
-    const charactersNames = document.querySelectorAll(".hero-name")
-    const search = inputValue.value.toLowerCase()
-    charactersNames.forEach(character => {
-        character.parentElement.style.display = 'block';
-        if (!character.innerText.toLowerCase().includes(search)) {
-            character.parentElement.style.display = 'none';
+const searching = document.querySelector('.search-input');
+searching.addEventListener('input', _ => {
+    const value = searching.value.toUpperCase();
+    const characterName = document.querySelectorAll('.hero-name');
+    characterName.forEach(element => {
+        element.parentElement.style.display = "block";
+        if(!element.innerText.includes(value)){
+            element.parentElement.style.display = "none";
         }
     })
+    
 })
-
-
-
